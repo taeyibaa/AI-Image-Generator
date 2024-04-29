@@ -1,13 +1,18 @@
+
+document.addEventListener("DOMContentLoaded", function() {
 const generateForm = document.querySelector(".generate-form");
-const generateBtn = generateForm.querySelector(".generate-btn");
+const generateBtn = document.querySelector(".generate-btn");
 const imageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "YOUR-OPENAI-API-KEY-HERE"; // Your OpenAI API key here
+console.log(generateBtn);
+
+const OPENAI_API_KEY = "sk-proj-NR0Fy01n2OwqzVSori6uT3BlbkFJPEXULHfcSorkH32A0A6X"; // Your OpenAI API key here
 let isImageGenerating = false;
 
 const updateImageCard = (imgDataArray) => {
   imgDataArray.forEach((imgObject, index) => {
     const imgCard = imageGallery.querySelectorAll(".img-card")[index];
+    console.log(imgCard);
     const imgElement = imgCard.querySelector("img");
     const downloadBtn = imgCard.querySelector(".download-btn");
     
@@ -34,8 +39,9 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
         "Authorization": `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        prompt: userPrompt,
-        n: userImgQuantity,
+        model: "dall-e-3",
+  prompt: "a white siamese cat",                                                    
+        n: 1,
         size: "512x512",
         response_format: "b64_json"
       }),
@@ -82,3 +88,4 @@ const handleImageGeneration = (e) => {
 }
 
 generateForm.addEventListener("submit", handleImageGeneration);
+});

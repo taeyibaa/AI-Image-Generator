@@ -109,6 +109,28 @@
 
       <div class="text-center mt-20 ">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">AI Image Generator Tool</h1>
+
+        <section class="image-generator  w-full gap-11 mx-auto">
+          <div class="content my-5">
+            <form action="#" class="generate-form">
+              <div class="w-fit mx-auto gap-3 flex items-center bg-white rounded-full px-3 py-2">
+              <input class="prompt-input border-none outline-none px-3" type="text" placeholder="Describe what you want to see" required>
+                <select class="img-quantity ">
+                  <option value="1">1 Image</option>
+                  <option value="2">2 Images</option>
+                  <option value="3">3 Images</option>
+                  <option value="4" selected>4 Images</option>
+                </select>
+                <button type="submit" class="generate-btn h-full px-6 py-2 bg-purple-800 hover:bg-purple-950 rounded-full text-white font-bold">Generate</button>   
+            
+           
+            </div>
+            </form>
+          </div>
+        </section>
+
+
+
         <p class="mt-6 text-lg leading-8 text-gray-600">Convert your text into an image within a second using this
           JavaScript-powered AI Image Generator tool</p>
       
@@ -117,22 +139,7 @@
         </div>
       </div>
 
-      <section class="image-generator -mt-20 w-full gap-11 ">
-        <div class="content">
-          <form action="#" class="generate-form  ">
-            <input class="prompt-input w-full " type="text" placeholder="Describe what you want to see" required>
-            <div class="controls">
-              <select class="img-quantity ">
-                <option value="1">1 Image</option>
-                <option value="2">2 Images</option>
-                <option value="3">3 Images</option>
-                <option value="4" selected>4 Images</option>
-              </select>
-              <button type="submit  " class="generate-btn  bg-purple-800 hover:bg-purple-950 text-white font-bold">Generate</button>
-            </div>
-          </form>
-        </div>
-      </section>
+    
     </div>
     <div
       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -197,7 +204,7 @@
     <div class="container mx-auto mt-2 max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 class="sr-only">Products</h2>
 
-      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-6 -mt-20">
+      <div class="grid image-gallery grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-6 -mt-20">
         <a href="#" class="shadow-xl  group">
           <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
             <img src="images/download.png" class="h-full w-full object-cover object-center group-hover:opacity-75">
