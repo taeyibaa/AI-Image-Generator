@@ -6,7 +6,7 @@ const imageGallery = document.querySelector(".image-gallery");
 
 console.log(generateBtn);
 
-const OPENAI_API_KEY = "test"; // Your OpenAI API key here
+// const OPENAI_API_KEY = "test"; // Your OpenAI API key here
 let isImageGenerating = false;
 
 const updateImageCard = (imgDataArray) => {
