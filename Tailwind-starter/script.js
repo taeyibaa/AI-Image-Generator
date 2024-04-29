@@ -6,7 +6,7 @@ const imageGallery = document.querySelector(".image-gallery");
 
 console.log(generateBtn);
 
-
+const OPENAI_API_KEY = "sk-proj-NR0Fy01n2OwqzVSori6uT3BlbkFJPEXULHfcSorkH32A0A6X"; // Your OpenAI API key here
 let isImageGenerating = false;
 
 const updateImageCard = (imgDataArray) => {
@@ -36,7 +36,7 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        
+        "Authorization": `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
         model: "dall-e-2",
